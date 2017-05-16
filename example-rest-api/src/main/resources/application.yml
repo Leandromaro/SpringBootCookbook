@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+    
+security:
+  oauth2:
+    client:
+      clientId: 941730258014-rcrhnurgm7f2mh0dff4vjblpfvei837v.apps.googleusercontent.com
+      clientSecret: H1gqLlUIOeup8-edmaFgfPyR
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
+
+server:
+  port: 8082
