@@ -16,12 +16,15 @@ import org.test.bookpub.repository.BookRepository;
 public	class	BookController	{
     @Autowired
     private BookRepository bookRepository;
-    @RequestMapping(value	=	"",	method	=	RequestMethod.GET)
-    public	Iterable<Book>	getAllBooks()	{
-        return	bookRepository.findAll();
+
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public Iterable<Book> getAllBooks() {
+        return bookRepository.findAll();
     }
-    @RequestMapping(value	=	"/{isbn}",	method	= RequestMethod.GET)
-    public	Book	getBook(@PathVariable String	isbn)	{
-        return	bookRepository.findBookByIsbn(isbn);
+
+    @RequestMapping(value = "/{isbn}", method = RequestMethod.GET)
+    public Book getBook(@PathVariable String isbn) {
+        return bookRepository.findBookByIsbn(isbn);
     }
+
 }
