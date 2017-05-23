@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.test.bookpub.entity.Book;
+import org.test.bookpub.isbn.Isbn;
 import org.test.bookpub.repository.BookRepository;
 
 /**
@@ -23,8 +24,9 @@ public	class	BookController	{
     }
 
     @RequestMapping(value = "/{isbn}", method = RequestMethod.GET)
-    public Book getBook(@PathVariable String isbn) {
-        return bookRepository.findBookByIsbn(isbn);
+    public Book getBook(@PathVariable Isbn isbn) {
+        return bookRepository.findBookByIsbn(isbn.getIsbn());
     }
+
 
 }
