@@ -1,4 +1,4 @@
-package org.test.bookpub.isbn;
+package org.test.bookpub;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.WebDataBinder;
@@ -28,7 +28,11 @@ public class IsbnEditor extends PropertyEditorSupport {
             return "";
         }
     }
+    //  WebDataBinder provides us with an ability to register as many custom editors as we require for the controller methods to be bound properly.
 
+    // @InitBinder
+    // Let us to explicitly instantiate new editors
+    // for every web request.
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(Isbn.class, new IsbnEditor());

@@ -11,6 +11,8 @@ import org.test.bookpub.entity.Publisher;
  * The @RepositoryRestResource annotation,
  * provides us with the ability to have a finer control over
  * the exposure of the repository as a web data service.
+ *
+ * Provides us HATOAS
  */
 
 @RepositoryRestResource

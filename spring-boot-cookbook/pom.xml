@@ -40,6 +40,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
+			<version>1.2.8.RELEASE</version>
 		</dependency>
 		<!-- Use MySQL Connector-J -->
 
